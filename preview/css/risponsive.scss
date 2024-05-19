@@ -1,0 +1,220 @@
+@import "mixing";
+
+*{
+    @include reset;
+}
+
+
+@include query(m){
+    .homeslider{
+        width: 100vw;
+        height: 60vh;
+        padding-left: 3rem;
+    }
+    header .container .right{
+        margin-left: 15vw;
+    }
+    .mide{
+        padding: 3rem;
+    }
+}
+@include query(s){
+    .homeslider{
+        width: 100vw;
+        height: 60vh;
+        padding-left: 1.5rem;
+    }
+    .mide{
+        padding: 10rem;
+    }
+    .mide > .Product{
+        display: block;
+        
+        div:last-child{
+            margin-top: 2.5rem;
+        }
+    }
+    .Services > .title > p:nth-child(4){
+        width: 40rem;
+    }
+    .Services > .center > .left > img{
+        width: 100%;
+    }
+    .Services > .center > .left > a{
+        margin-bottom: 1.5rem;
+    }
+    .Team > .users{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+
+        div{
+
+            div{
+                margin-left: 17%;
+            }
+        }
+    }
+    
+    .blog > div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    .blog > p{
+        color: var(--font-gray);
+        width: 27rem;
+        margin-left: 7rem;
+    }
+    .contact{
+        padding-bottom: 6rem;
+    }
+    .contact > div{
+        padding: 0rem;
+    }
+    .contact > div > div:nth-child(2) .inp{
+        width: 80%;
+        padding: 1rem;
+        margin-left: 0rem;
+        border: 1px solid #73777765;
+        margin-top: 1.5rem;
+    }
+    .contact > div > div:nth-child(2) > input{
+        width: 80%;
+        margin-left: 0rem;
+    }
+    .contact > div > div:nth-child(2) button{
+        margin-left: 0rem;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 7rem 8rem;
+        gap: 1rem;
+        color: #737777;
+
+        h1{
+            font-size: x-large;
+        }
+    }
+}
+@include query(e){
+    .homeslider{
+        width: 100vw;
+        height: 30vh;
+        padding-left: 2rem;
+    }
+    main > .Home .item > div > h1{
+        font-size: 3rem;
+        font-weight: 600;
+        padding-top: 0;
+    }
+    .mide > .Product{
+        display: block;
+        
+        div:last-child{
+            margin-top: 2.5rem;
+        }
+    }
+    .Home .font-as{
+        bottom: 50%;
+    }
+    .Services{
+        padding-bottom: 20rem;
+    }
+    .Services > .center > .left > img{
+        width: 100%;
+    }
+    .Services > .center > .left > a{
+        margin-bottom: 1.5rem;
+    }
+    .Services > .center > .right{
+        div{
+            width: 70%;
+            margin-left: 5rem;
+        }
+    }
+    .Portfolio > .up{
+
+        p{
+            width: 30rem;
+        }
+        h1{
+            font-size: xx-large;
+            font-weight: 600;
+        }
+        
+    }
+    .Portfolio .down > a{
+        bottom: 1rem;
+        left: 3rem;
+        padding: 0.6rem 2.5rem;
+        font-size: medium;
+    }
+    .Team > .users{
+        display: block;
+
+        div{
+            padding: 1.5rem 2rem;
+            margin-top: 1rem;
+            margin-left: 4rem;
+            width: 20rem;
+
+            div{
+                border: 1px solid var(--orange);
+                margin-left: 20%;
+            }
+        }
+    }
+    .blog > div{
+        display: block;
+    }
+    .blog > p{
+        color: var(--font-gray);
+        width: 27rem;
+        margin-left: 1rem;
+    }
+    .contact{
+        padding-bottom: 8rem;
+    }
+    .contact > h1{
+        font-size: 2rem;
+        font-weight: 600;
+        padding-bottom: 3.5rem;
+    }
+    .contact > div{
+        padding: 0rem;
+    }
+    .contact > div > div:nth-child(2) .inp{
+        width: 100%;
+        padding: 1rem;
+        margin-left: 0rem;
+        border: 1px solid #73777765;
+        margin-top: 1.5rem;
+    }
+    .contact > div > div:nth-child(2) > input{
+        width: 100%;
+        margin-left: 0rem;
+    }
+    .contact > div > div:nth-child(2) button{
+        margin-left: 0rem;
+    }
+    .mide{
+        padding: 9rem;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 7rem 8rem;
+        gap: 1rem;
+        color: #737777;
+        div{
+            width: 100%;
+        }
+
+        h1{
+            font-size: x-large;
+        }
+    }
+}

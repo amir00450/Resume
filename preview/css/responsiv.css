@@ -1,0 +1,20 @@
+@media screen and (max-width: 367px){
+    body{
+        display: none;
+    }
+    }
+    @media screen and (min-width: 367px) and (max-width: 767px){
+        body{
+            display: none;
+        }
+    }
+    @media screen and (min-width:767px) and (max-width:990px) {
+        body{
+            display: none;
+        }
+    }
+    @media screen and (min-width:990px) and (max-width:1021px){
+        body{
+            display: none;
+        }
+    }

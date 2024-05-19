@@ -1,0 +1,449 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --wite : #fff;
+    --gray: #545454;
+    --green: #1F4B3F;
+    --lightgreen: #5BBB7B;
+}
+
+@media screen and (max-width: 475px){
+    body{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 475px) and (max-width: 575px){
+    /**************************** HEADER *****************************/
+    header{
+        background-color: #fff;
+        position: absolute;
+    }
+    header ul li{
+        display: none;
+    }
+    header ul img:nth-child(1){
+        display: none;
+    }
+    header ul img:nth-child(2){
+        display: block;
+    }
+    header > div > a:nth-child(1),
+    header > div > a:nth-child(3){
+        display: none;
+    }
+
+    header > div > a:nth-child(2),
+    header > div > a:nth-child(4){
+        display: inline;
+        color: black;
+        font-size: large;
+        font-weight: 700;
+        transition: 0.5s;
+    }
+    header > div > a:nth-child(2):hover,
+    header > div > a:nth-child(4):hover{
+        color: var(--lightgreen);
+    }
+
+    #menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 400px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    transition-duration: .25s;
+    direction: rtl;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    color: chartreuse;
+  }
+
+
+
+    /**************************** MAIN *****************************/
+    main > .title{
+        height: 800px;
+    }
+    main > .title > .parent{
+        padding-top: 25%;
+    }
+    main > .title > .parent > .right{
+        width: 100%;
+        margin-right: 5%;
+    }
+    main > .title > .parent > .right > div{
+        width: 100%;
+        right: 0;
+    }
+    main > .title > .parent > .left{
+        display: none;
+    }
+    main > .title > .parent > .right > div > p{
+        margin-top: 10px;
+        font-weight: 100;
+        font-size: 15px;
+        padding: 10px;
+    }
+    main > .title > .parent > .right > div > a{
+        left: 8%;
+        text-align: center;
+        width: 90%;
+        height: 11%;
+        transition: 0.5s;   
+        font-weight: 900;
+        margin-top: 20px;
+    }
+    main > .title > .parent > .right > div > div{
+        justify-content: space-between;
+        padding: 0 100px;
+        padding-top: 100px;
+        flex-wrap: wrap;
+    }
+    main > .title > .parent > .right > div > div > div{
+        width: 100px;
+    }
+
+
+    #ic-fix{
+        bottom: 20px;
+        right: 20px;
+    }
+
+
+
+
+    main > .Grouping{
+        padding: 10px 10px;
+        width: 100%;
+    }
+    main > .Grouping > .top{
+        display: block;
+    }
+    main > .Grouping > .top p{
+        font-size: 22px;
+        font-weight: 600;
+    }
+    main > .Grouping > .top h3{
+        padding: 10px 0 40px 0;
+    }
+    main > .Grouping > .bottom{
+        display: flex;
+    }
+    main > .Grouping > .bottom > div:nth-child(1),
+    main > .Grouping > .bottom > div:nth-child(2){
+        width: 50%;
+    }
+    main > .Grouping > .bottom > div:nth-child(3),
+    main > .Grouping > .bottom > div:nth-child(4),
+    main > .Grouping > .bottom > div:nth-child(5){
+        display: none;
+    }
+
+    
+
+
+    main > .levels img{
+        display: none;
+    }
+    main > .levels > div{
+        width: 100%;
+        padding: 100px 10px 10px 10px;
+    }
+    main > .levels > div > div > h3{
+        font-size: 22px;
+        font-weight: 600;
+    }
+    main > .levels > div > div > p{
+        padding-top: 10px;
+    }
+    #level{
+        position: relative;
+        width: 100%;
+        display: block;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        padding-top: 70px;
+        padding-bottom: 20px;
+    }
+    #level > div{
+        box-shadow: 0 0px 0px rgba(255, 255, 255, 0);
+    }
+    #level > div > div p{
+       display: inline-block;
+    }
+    main > .levels > div > a{
+        left: 35%;
+    }
+
+
+    main > .services{
+        padding: 10px 10px;
+        width: 100%;
+    }
+    main > .services > .top{
+        display: block;
+    }
+    main > .services > .top p{
+        font-size: 22px;
+        font-weight: 600;
+    }
+    main > .services > .top h3{
+        padding: 10px 0 40px 0;
+    }
+    main > .services > .bottom{
+        display: flex;
+    }
+    main > .services > .bottom > div:nth-child(1),
+    main > .services > .bottom > div:nth-child(2){
+        width: 50%;
+    }
+    main > .services > .bottom > div:nth-child(3),
+    main > .services > .bottom > div:nth-child(4),
+    main > .services > .bottom > div:nth-child(5){
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 575px) and (max-width: 767px){
+    /********************** HEADER ***************************/
+    header{
+        background-color: #fff;
+        position: absolute;
+    }
+    header ul li{
+        display: none;
+    }
+    header ul img:nth-child(1){
+        display: none;
+    }
+    header ul img:nth-child(2){
+        display: block;
+    }
+    header > div > a:nth-child(1),
+    header > div > a:nth-child(3){
+        display: none;
+    }
+
+    header > div > a:nth-child(2),
+    header > div > a:nth-child(4){
+        display: inline;
+        color: black;
+        font-size: large;
+        font-weight: 700;
+        transition: 0.5s;
+    }
+    header > div > a:nth-child(2):hover,
+    header > div > a:nth-child(4):hover{
+        color: var(--lightgreen);
+    }
+
+
+    /**************************** MAIN *****************************/
+    main > .title{
+        height: 640px;
+    }
+    main > .title > .parent{
+        padding-top: 5%;
+    }
+    main > .title > .parent > .right{
+        width: 100%;
+        margin-right: 5%;
+    }
+    main > .title > .parent > .right > div{
+        width: 100%;
+    }
+    main > .title > .parent > .left{
+        display: none;
+    }
+    main > .title > .parent > .right > div > p{
+        margin-top: 10px;
+        font-weight: 100;
+        font-size: 15px;
+        padding: 10px;
+    }
+    main > .title > .parent > .right > div > a{
+        left: 39%;
+        padding: 30px 20px;
+        border-radius: 50px;
+        transition: 0.5s;   
+        font-weight: 900;
+        margin-top: 20px;
+    }
+    main > .title > .parent > .right > div > div{
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 0 100px;
+        padding-top: 100px;
+    }
+    main > .title > .parent > .right > div > div > div{
+        width: 100px;
+    }
+
+
+    #ic-fix{
+        bottom: 20px;
+        right: 20px;
+    }
+
+
+
+
+    main > .Grouping{
+        padding: 20px 20px;
+        width: 100%;
+    }
+    main > .Grouping > .top{
+        display: block;
+    }
+    main > .Grouping > .top p{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    main > .Grouping > .top h3{
+        padding: 10px 0 40px 0;
+    }
+    main > .Grouping > .bottom{
+        display: flex;
+    }
+    main > .Grouping > .bottom > div:nth-child(1),
+    main > .Grouping > .bottom > div:nth-child(2){
+        width: 50%;
+    }
+    main > .Grouping > .bottom > div:nth-child(3),
+    main > .Grouping > .bottom > div:nth-child(4),
+    main > .Grouping > .bottom > div:nth-child(5){
+        display: none;
+    }
+
+    
+
+
+    main > .levels img{
+        display: none;
+    }
+    main > .levels > div{
+        width: 100%;
+        padding: 100px 10px 10px 10px;
+    }
+    main > .levels > div > div > h3{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    main > .levels > div > div > p{
+        padding-top: 10px;
+    }
+    #level{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #level > div{
+        box-shadow: 0 0px 0px rgba(255, 255, 255, 0);
+        width: 45%;
+    }
+    #level > div > div p{
+       display: inline-block;
+    }
+    main > .levels > div > a{
+        left: 35%;
+    }
+
+
+    main > .services{
+        padding: 20px 20px;
+        width: 100%;
+    }
+    main > .services > .top{
+        display: block;
+    }
+    main > .services > .top p{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    main > .services > .top h3{
+        padding: 10px 0 40px 0;
+    }
+    main > .services > .bottom{
+        display: flex;
+    }
+    main > .services > .bottom > div:nth-child(1),
+    main > .services > .bottom > div:nth-child(2){
+        width: 50%;
+    }
+    main > .services > .bottom > div:nth-child(3),
+    main > .services > .bottom > div:nth-child(4),
+    main > .services > .bottom > div:nth-child(5){
+        display: none;
+    }
+}

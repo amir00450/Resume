@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: vazir;
+}
+
+@font-face {
+  font-family: vazir;
+  src: url("../font/Vazir-FD.ttf");
+}
+
+.bg-mate{
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+}
+
+.bg-p{
+  transition: 0.5s;
+}
+.bg-p:hover{
+  background-color: #735BA5;
+  color: #fff;
+}
+
+.bg-q{
+  transition: 0.5s;
+}
+.bg-q:hover{
+  background-color: #77CBB9;
+  color: #fff;
+}
+
+.bg-r{
+  transition: 0.5s;
+}
+.bg-r:hover{
+  background-color: #D93735;
+  color: #fff;
+}
+
+.bg-y{
+  transition: 0.5s;
+}
+.bg-y:hover{
+  background-color: #F29F05;
+  color: #fff;
+}
+footer{
+  background-color: #C6EAFF;
+  width: 90vw;
+  margin: 0 auto;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.cards{
+  grid-template-columns: 1fr 1fr;
+}
+.card{
+  margin: 0 auto;
+}

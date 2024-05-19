@@ -1,0 +1,299 @@
+@media screen and (max-width: 367px){
+body{
+    display: none;
+}
+}
+@media screen and (min-width: 367px) and (max-width: 767px){
+    /************************** HEADER ****************************/
+    header{
+        justify-content: space-between;
+    }
+    #hamber{
+        display: block;
+        width: 5%;
+        z-index: -1;
+    }
+    header ul li{
+        display: none;
+    }
+    #menu-container{
+        position: absolute;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        background: #fff;
+    }
+    #menu-container a{
+        text-decoration: none;
+        color: var(--font-header);
+        margin-top: 10px;
+        font-size: small;
+        font-weight: 100;
+    }
+    #menu-container li{
+        padding: 10px 7px;
+    }
+    .active{
+        height: auto !important;
+        z-index: 1;
+    }
+    /************************** ABOUT US ****************************/
+    .about-dl{
+        align-items: center;
+    }
+    .about-dl > .picture{
+        display: none;
+    }
+    .about-dl > .download{
+        margin-top: 10%;
+        width: 50%;
+        padding: 15px 15px;
+        right: 23%;
+        top: 0;
+        height: 60vh;
+    }
+    .about-dl > .download >.btn{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10%;
+        gap: 10px;
+        height: 70%;
+    }
+    .about-dl > .download >.btn div{
+        width: 100%;
+        height: 20%;
+    }
+    .about-dl > .download > h1{
+        font-size: x-large;
+    }
+    .about-dl > .download > h2{
+        font-weight: 100;
+        font-size: large;
+    }
+    .about-dl > img{
+        margin-top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    /******************** SERVISE ************************/
+    main > .services{
+        padding: 3% 2%;
+        padding-bottom: 2%;
+    }
+    main > .services > h3{
+        font-size: x-large;
+    }
+    main > .services .dis-links h3{
+        font-size: large;
+        padding-right: 0;
+        font-weight: 900;
+    }
+    main > .services .dis-links p{
+        line-height: 32px;
+        font-size: smaller;
+    }
+    main > .services > .links a{
+        width: 10%;
+        height: 50px;
+        text-align: center;
+        text-decoration: none;
+        color: var(--font-header);
+        opacity: 0.5;
+    }
+    .tapsi-clas{
+        display: none;
+    }
+    .tap{
+        width: 100%;
+    }
+    .tap .dis-links .dis-classic{
+        width: 100%;
+    }
+    main > .services .discription{
+        flex-direction: column;
+    }
+    main > .services .discription > div
+    ,main > .services .discription > div:last-child{
+        width: 100%;
+    }
+    main > .services .discription h3{
+        font-size: large;
+        font-weight: 900;
+        padding: 10px;
+    }
+    #dis div:last-child{
+        width: 100%;
+    }
+    #dis #btn-signup{
+        width: 30%;
+    }
+
+    /******************* OPTION ***********************/
+    main > .option > .bakend{
+        height: auto;
+    }
+    main > .option > .bakend .border{
+        display: none;
+    }
+    main > .option > .bakend{
+        flex-direction: column;
+    }
+    main > .option > .bakend .original{
+        padding-top: 30px;
+    }
+    main > .option > .bakend .original h3{
+        font-weight: 100;
+    }
+    main > .option > .bakend .original:hover p{
+        opacity: 1;
+        width: 110%;
+        height: 10px;
+    }
+
+    /********************* DERIVER **************************/
+    main > .driver{
+        padding: 7% 5%;
+    }
+    main > .driver > img{
+        width: 80%;
+    }
+    main > .driver > div{
+        margin-top: 70%;
+        
+    }
+    main > .driver  p{
+        width: 100%;
+    }
+    main > .driver > div h2{
+        font-size: 23px;
+        width: 100%;
+    }
+    main > .driver > div > h3{
+        font-size: medium;
+        font-weight: 600;
+    }
+    main > .driver > div ol li{
+        font-weight: 100;
+    }
+    main > .driver > div > div > a{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin-top: 10px;
+        text-align: center;
+        margin-right: 30%;
+    }
+
+
+    /******************** WEBLOG **********************/
+    main > .weblog{
+        padding: 0 1%;
+        display: block;
+    }
+    main > .weblog > div{
+        width: 100%;
+    }
+    main > .weblog > div h4{
+        font-size: medium;
+    }
+    main > .weblog > div img{
+        width: 100%;
+    }
+    main > .weblog > div p{
+        font-size: small;
+        width: 100%;
+    }
+    #weblog{
+        font-size: x-large;
+        padding: 0 5%;
+        padding-top: 5%;
+    }
+
+    /****************** IRAN ******************/
+    .iran{
+        display: none;
+    }
+
+    /********************** FOOTER ************************/
+    footer{
+        margin-top: 30px;
+        padding: 30px 20px;
+        display: block;
+    }
+    footer > .foot{
+        display: block;
+    }
+    footer > .foot > .info p:nth-child(3),
+    footer > .foot > .info p:nth-child(4){
+    display: inline-block;
+    }
+    footer > .foot h2{
+        padding-top : 30px;
+    }
+    br{
+        display: none;
+    }
+    footer > .trust{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 20px;
+    }
+    footer > .trust > a img{
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+    }
+    footer > .trust > a{
+        padding: 10px;
+        height: 50%;    
+        width: 25%;
+    }
+    
+    
+}
+@media screen and (min-width:767px) and (max-width:990px) {
+    header > nav > ul > li:last-child{
+        display: none;
+    }
+    .about-dl > .picture{
+        display: none;
+    }
+    .about-dl > .download{
+        padding: 20px 20px;
+        right: 100px;
+        width: 550px;
+    }
+    main > .driver > img{
+        width: 40%;
+    }
+    main > .driver > div ol li{
+        width: 50%;
+    }
+    main > .driver  p{
+        width: 50%;
+    }
+    main > .driver > div h2{
+        width: 50%;
+    }
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer > .trust > a img{
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+    }
+    footer > .trust > a{
+        padding: 10px;
+    }
+}
+@media screen and (min-width:990px) and (max-width:1021px){
+    .about-dl > .picture{
+        display: none;
+    }
+}

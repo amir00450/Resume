@@ -1,0 +1,448 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    font-family: yekan;
+}
+
+@font-face{
+    font-family: yekan;
+    src: url("../fonts/Farsi-Digits/Vazir-FD.ttf");
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --wite : #fff;
+    --gray: #545454;
+    --green: #1F4B3F;
+    --lightgreen: #5BBB7B;
+}
+header ul li::after{
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: .12em;
+    position: absolute;
+    top: -.7em;
+    right: 0;
+    background: var(--lightgreen);
+}
+/******************************* HEADER ************************************/
+
+header{
+    width: 100%;
+    height: 9vh;
+    background-color: rgba(0, 0, 0, 0.116);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10%;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+header ul li{
+    padding: 12px;
+    position: relative;
+}
+header ul li::after{
+    transform: translate(0,-.3em);
+    opacity: 0;  
+    transition: all .4s ease;
+    transform: scaleX(0);
+}
+header ul li:hover::after{
+    opacity: 1;
+    transform: scaleX(1);
+}
+header ul li:nth-child(5)::after{
+    opacity: 0;
+    transform: scaleX(1);
+}
+header ul li:nth-child(6)::after{
+    opacity: 0;
+    transform: scaleX(1);
+}
+
+header ul li a{
+    text-decoration: none;
+    color: var(--wite);
+    font-size: 12px;
+}
+header ul img{
+    padding-top: 10px;
+}
+header ul img:nth-child(2){
+    display: none;
+}
+
+header > div > a{
+    color: var(--wite);
+    text-decoration: none;
+    font-size: small;
+}
+
+header > div > a:nth-child(1){
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid var(--wite);
+}
+header > div > a:nth-child(1):hover > span{
+    opacity: 0.8;
+}
+header > div > a:nth-child(2){
+    padding: 10px 15px;
+}
+header > div > a:nth-child(3){
+    padding: 8px 31px;
+    border-radius: 25px;
+    background-color: #fff;
+    color: var(--green);
+    transition: 0.5s;
+}
+header > div > a:nth-child(4){
+    display: none;
+}
+header > div > a:nth-child(3):hover{
+    color: var(--wite);
+    background-color: var(--lightgreen);
+}
+
+/****************************** MAIN **********************************/
+main > .title{
+    background-image: url(../imges/home-bg.webp);
+    background-position: center;
+    background-size: cover;
+    height: 855px;
+    width: 100%;
+}
+main > .title > .parent{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    padding-top: 120px;
+    justify-content: space-between;
+}
+
+main > .title > .parent > .right{
+    width: 40%;
+    height: 500px;
+    position: relative;
+    margin-right: 150px;
+    color: #fff;
+}
+
+main > .title > .parent > .right > div{
+    position: absolute;
+    bottom: 0;
+}
+main > .title > .parent > .right > div > h1{
+    font-size: 35px;
+}
+main > .title > .parent > .right > div > p{
+    font-size: small;
+    padding-top: 15px;
+}
+
+main > .title > .parent > .right > div > a{
+    padding: 12px 40px;
+    border-radius: 25px;
+    background-color: var(--lightgreen);
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    left: 100px;
+    transition: 0.5s;
+}
+main > .title > .parent > .right > div > a:hover{
+    background-color: var(--green);
+}
+
+
+main > .title > .parent > .right > div > div{
+    display: flex;
+    width: 100%;
+    text-align: right;
+    justify-content: space-around;
+    padding-top: 80px;
+}
+
+
+
+
+main > .title > .parent > .left{
+    width: 35%;
+    margin-left: 30px;
+    position: relative;
+}
+main > .title > .parent > .left > img:nth-child(1){
+    position: absolute;
+    width: 100%;
+    border-radius: 15px;
+}
+main > .title > .parent > .left > img:nth-child(2){
+    position: absolute;
+    top: 170px;
+    right: -120px;
+    animation-name: left-right;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+main > .title > .parent > .left > div{
+    border-radius: 10px;
+    width: 200px;
+    height: 70px;
+    background-color: var(--wite);
+    position: absolute;
+    padding: 12px 30px;
+    bottom: -220px;
+    color: var(--gray);
+    left: 20px;
+    animation-name: top-bottom;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes top-bottom{
+    50%{
+        transform: translate(0, 20px);
+        }
+    100%{
+        transform: translate(0, 0);
+        }
+}
+@keyframes left-right{
+    50%{
+        transform: translate(20px, 0);
+        }
+    100%{
+        transform: translate(0, 0);
+        }
+}
+
+#ic-fix{
+    position: fixed;
+    bottom: 50px;
+    right: 70px;
+    border-radius: 100%;
+    box-shadow: 0 1px 5px rgba(10, 10, 10, 0.2), 0 1px 10px rgba(5, 5, 5, 0.15);
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+#ic-fix img{
+    width: 100%;
+    height: 100%;
+}
+
+main > .Grouping{
+    padding: 80px 80px;
+    width: 100%;
+}
+main > .Grouping > .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main > .Grouping > .top p{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+main > .Grouping > .top h3{
+    font-size: medium;
+    font-weight: lighter;
+    color: var(--gray);
+}
+main > .Grouping > .top a{
+    text-decoration: none;
+    color: var(--lightgreen);
+    background-color: rgba(128, 128, 128, 0.068);
+    padding: 17px 40px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+main > .Grouping > .top a:hover{
+    background-color: var(--lightgreen);
+    color: var(--wite);
+    border-color: #ffffff00;
+}
+
+
+main > .Grouping > .bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    padding-top: 60px;
+}
+main > .Grouping > .bottom > div{
+    padding: 43px 25px;
+    border-radius: 12px;
+    border: 0.5px solid rgba(128, 128, 128, 0.164);
+    transition: 0.4s;
+}
+main > .Grouping > .bottom > div:hover{
+    background-color: #ffc79a62;
+    border: 0.5px solid rgba(128, 128, 128, 0.048);
+    cursor: pointer;
+}
+main > .Grouping > .bottom > div > i{
+    font-size: xxx-large;
+    color: var(--green);
+}
+main > .Grouping > .bottom > div > h4{
+    font-weight: lighter;
+    color: var(--gray);
+}
+
+
+main > .levels{
+    width: 100%;
+    height: 900px;
+    background-color: #f3f3f362;
+    display: flex;
+}
+main > .levels > div{
+    width: 100%;
+    padding: 250px 60px;
+    position: relative;
+}
+main > .levels > div > a{
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    padding: 13px 23px;
+    border-radius: 25px;
+    border: 1px solid;
+    left: 45%;
+    transition: 0.5s;
+}
+main > .levels > div > a:hover{
+    background-color: var(--lightgreen);
+    color: var(--wite);
+    border-color: #ffffff00;
+}
+#level{
+    position: relative;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+#level > div{
+    padding: 40px 40px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 5px rgba(10, 10, 10, 0.062);
+}
+#level > div i{
+    padding-bottom: 20px;
+}
+#level > div h6{
+    font-size: 18px;
+    font-weight: 500;
+}
+#level > div p{
+    font-size: 14px;
+    padding-top: 5px;
+}
+main > .levels > div > img{
+    position: absolute;
+    left: 0;
+    top: 100px;
+}
+main > .levels > div > div > h3{
+    font-size: xx-large;
+    font-weight: 600;
+}
+main > .levels > div > div > p{
+    color: var(--gray);
+}
+
+
+main > .services{
+    padding: 80px 80px;
+    width: 100%;
+}
+main > .services > .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main > .services > .top p{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+main > .services > .top h3{
+    font-size: medium;
+    font-weight: lighter;
+    color: var(--gray);
+    padding-top: 7px;
+}
+main > .services > .top a{
+    text-decoration: none;
+    color: var(--lightgreen);
+    background-color: rgba(128, 128, 128, 0.068);
+    padding: 17px 40px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+main > .services > .top a:hover{
+    background-color: var(--lightgreen);
+    color: var(--wite);
+    border-color: #ffffff00;
+}
+main > .services > .bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    padding-top: 50px;
+}
+main > .services > .bottom > div{
+    position: relative;
+    opacity: 1.5;
+    color: var(--wite);
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+main > .services > .bottom > div > img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+main > .services > .bottom > div:hover > img{
+    transform: rotate(1deg) scale(1.1);
+}
+main > .services > .bottom > div:hover > div{
+    background-color: #000000a8;
+}
+main > .services > .bottom > div > div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000075;
+    padding: 30px 30px;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+main > .services > .bottom > div > div p{
+    font-size: medium;
+    font-weight: 500;
+}
